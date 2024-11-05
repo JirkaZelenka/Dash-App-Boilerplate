@@ -1,0 +1,18 @@
+# Environments
+.env
+.env.example
+.venv
+env/
+venv/
+
+notes.txt
+.log
+data/
+.db
+
+# Byte-compiled / optimized / DLL files
+/__pycache__/*.pyc
+*.pyc
+
+# Web drivers - necessary for Selenium version of scraping
+.exe

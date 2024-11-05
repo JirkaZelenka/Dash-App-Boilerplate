@@ -1,2 +1,30 @@
 # Dash-App-Boilerplate
 This boilerplate should allow for easy setup of a dash app, with several pages, navbar, suggested components as database manager, etc.
+
+|-- apps
+    |-- callbacks.py
+    |-- config.py
+    |-- layout.py
+    |-- run.py
+|-- assets
+    |-- css
+        |-- main_page.css
+|-- data
+|-- db_managment
+    |-- data_manager.py
+|-- utils
+    |-- logger.py
+    |-- mailing.py
+    |-- utils.py
+- .env
+- .env.example
+- .gitignore
+- app.log
+- experiments.ipynb 
+- main.py
+- Makefile
+- my_db.db
+- notes.txt
+- README.md
+- requirements.in
+- requirements.txt
