@@ -18,7 +18,7 @@ VALID_USERNAME_PASSWORD_PAIRS = {
     }
 
 runner = Runner()
-data = runner.data_manager.get_all_data()
+data = runner.data_manager.get_all_data_as_df()
 print(f"LOADED SOME DATA: {len(data)}")
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
@@ -29,6 +29,8 @@ auth = dash_auth.BasicAuth(
 )
 
 app.layout = create_layout()
+
+register_callbacks(app, runner, data) 
 
 @app.callback(
     dash.dependencies.Output('page-content', 'children'),

@@ -17,9 +17,9 @@ def create_layout():
                     }
                 ),
                 dcc.Link('Page 1', href='/page_1', className='nav-link'),
-                html.Span(" | ", className='separator'),
+                html.Span("    |    ", className='separator'),
                 dcc.Link('Page 2', href='/page_2', className='nav-link'),
-                html.Span(" | ", className='separator'),
+                html.Span("    |    ", className='separator'),
                 dcc.Link('Page 3', href='/page_3', className='nav-link'),
             ], style={
                 'display': 'flex',
@@ -62,6 +62,19 @@ def create_layout_1():
         
         html.Div(id='output-data-length', 
                 style={'margin-top': '20px'}),
+        
+        html.Div([      
+            dash_table.DataTable(
+            id='data-table',
+            columns=[
+                {"name": "Name", "id": "name"},
+                {"name": "Age", "id": "age"},
+                {"name": "Email", "id": "email"},
+                {"name": "Date of Creation", "id": "created_at"},
+                {"name": "Is active", "id": "is_active"},
+                ],
+            )]
+        )
         
     ])
     return layout
